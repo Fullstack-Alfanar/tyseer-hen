@@ -1,5 +1,5 @@
 let sum = 0;
-let arr=[];
+let arr = [];
 function Students() {
 
     let elements = [];
@@ -19,17 +19,21 @@ function Students() {
     else if (isNaN(elements[1].value) || elements[1].value == null) {
         alert("please enter a number for score");
     }
+    else if( elements[1].value<0 || elements[1].value>100)
+    {
+        alert("please make sure that your score is between 0-100");
+    }
 
     else {
 
 
-        ele1 = document.createElement("label");
-        ele2 = document.createElement("label");
+        let ele1 = document.createElement("label");
+        let ele2 = document.createElement("label");
 
-        ele3 = document.createElement("td");
-        ele4 = document.createElement("td");
+        let ele3 = document.createElement("td");
+        let ele4 = document.createElement("td");
 
-        ele5 = document.createElement("tr");
+        let ele5 = document.createElement("tr");
 
 
         ele1.textContent = elements[0].value;
@@ -48,23 +52,26 @@ function Students() {
 
 
 
-        sum += parseInt(elements[1].value);
-        
-        
+
+
 
 
         var counter = elements[2].getElementsByTagName("tr");
+
 
 
         let x1 = document.getElementById("info");
         x1.textContent = counter.length;
 
         let x2 = document.getElementById("avg");
-        x2.textContent = sum / counter.length;
+        sum += Number.parseInt(elements[1].value);
 
-        
+        x2.textContent = Math.floor(sum / counter.length);
 
-        let y={
+
+
+
+        let y = {
             studentName: elements[0].value,
             studentScore: elements[1].value,
             studentInfo: counter.length,
@@ -75,7 +82,7 @@ function Students() {
         elements[0].value = "";
         elements[1].value = "";
 
-        localStorage.setItem('data',JSON.stringify(arr));
-        
+        localStorage.setItem('data', JSON.stringify(arr));
+
     }
 }
