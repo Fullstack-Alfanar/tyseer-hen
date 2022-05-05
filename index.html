@@ -10,12 +10,14 @@
 </head>
 
 <body>
-    <input  type="text" name="" id="name" placeholder="Student name">
-    <input  type="text" name="" id="score" placeholder="Student score">
-    <button  onclick="Students()">send here</button>
+    <input type="text" name="" id="name" placeholder="Student name">
+    <input type="text" name="" id="score" placeholder="Student score">
+    <input type="text" name="" id="img" placeholder="image link" required>
+    <input type="time" name="" id="time" placeholder="time" required>
+    <button onclick="Students()">send here</button>
 
     <div class="container">
-        
+
         <div>
             <h3>Average</h3>
             <div class="AVG" id="avg"></div>
@@ -30,8 +32,10 @@
     <table>
         <thead>
             <tr>
-                <td  style="background-color: rgb(34, 33, 33); color: white; "> <label for="">Names</label></td>
+                <td style="background-color: rgb(34, 33, 33); color: white; "> <label for="">Names</label></td>
                 <td style="background-color: rgb(34, 33, 33); color: white;"> <label for="">Scores</label></td>
+                <td style="background-color: rgb(34, 33, 33); color: white;"><img class="str" src="" alt="">image</td>
+                <td style="background-color: rgb(34, 33, 33); color: white;"><label for="">Time</label></td>
             </tr>
         </thead>
         <tbody id="bodyy">
