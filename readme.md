@@ -20,5 +20,5 @@ This proj created with html , css and javascript .
 <br>
 
 ### How to use
-[click here](https://fullstack-alfanar.github.io/tyseer-hen/)
+[click here](https://tyseerhen.github.io/tyseer-hen/)
 
